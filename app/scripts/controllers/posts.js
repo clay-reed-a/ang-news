@@ -9,9 +9,5 @@
  */
 angular.module('angNewsApp')
   .controller('PostsCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
   });
