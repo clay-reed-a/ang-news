@@ -8,18 +8,14 @@
  * Controller of the angNewsApp
  */
 app
-  .controller('PostsCtrl', function ($scope, Post) {
+  .controller('PostsCtrl', function ($scope, Post, $location) {
     $scope.posts = Post.all;
     var emptyPost = {url: 'http://', title: ''}
     $scope.post = emptyPost;
 
-    $scope.submitPost = function() {
-      Post.create($scope.post).then(function () {
-        $scope.post = emptyPost;
-      });
-    };
-
     $scope.deletePost = function (post) {
       Post.delete(post);
     };
+
+
   });
